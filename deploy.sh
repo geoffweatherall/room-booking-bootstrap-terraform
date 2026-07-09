@@ -7,6 +7,8 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
+echo "Setting up the shared Terraform remote state bucket..."
+
 terraform_dir="deploy/terraform"
 
 # First run only: backend.hcl points at a bucket that doesn't exist yet, so
