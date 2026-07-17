@@ -19,7 +19,7 @@ This creates a bucket named `remote-state-<aws-account-id>` (e.g.
 
 This project's own state needs to live in the bucket it creates, same as
 every other project — but on the very first run, that bucket doesn't exist
-yet, so Terraform can't initialize an S3 backend pointed at it. `deploy.sh`
+yet, so Terraform can't initialise an S3 backend pointed at it. `deploy.sh`
 handles this in three steps:
 
 1. It first tries `terraform init -backend-config=backend.hcl -migrate-state
