@@ -1,5 +1,5 @@
 output "state_bucket_name" {
-  description = "Name of the S3 bucket that stores Terraform remote state for all room-booking projects."
+  description = "Name of the S3 bucket that stores Terraform remote state for all mootmaker projects."
   value       = aws_s3_bucket.remote_state.id
 }
 

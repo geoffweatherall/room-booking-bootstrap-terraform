@@ -1,6 +1,6 @@
 data "aws_caller_identity" "current" {}
 
-# Shared Terraform remote state storage for all room-booking-* projects.
+# Shared Terraform remote state storage for all mootmaker-* projects.
 # prevent_destroy guards against an accidental `terraform destroy` wiping out
 # every project's state in one go.
 resource "aws_s3_bucket" "remote_state" {

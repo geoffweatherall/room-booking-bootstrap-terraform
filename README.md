@@ -1,6 +1,6 @@
-# room-booking-bootstrap-terraform
+# mootmaker-bootstrap-terraform
 
-Creates the shared S3 bucket that the other `room-booking-*` projects use as
+Creates the shared S3 bucket that the other `mootmaker-*` projects use as
 Terraform remote state storage, so state isn't kept only on one person's
 laptop and everyone applying Terraform reads/writes the same state.
 
@@ -52,7 +52,7 @@ it, remove that lifecycle block first.
 
 ## Configuring other projects to use remote state
 
-Each `room-booking-*` project's `deploy/terraform/` directory has:
+Each `mootmaker-*` project's `deploy/terraform/` directory has:
 
 - A `backend "s3" {}` block (empty) in `versions.tf`, declaring that the
   project uses an S3 backend without hardcoding the details.
@@ -67,7 +67,7 @@ Each `room-booking-*` project's `deploy/terraform/` directory has:
 
 - Scripts (`deploy.sh`, `undeploy.sh`, `authenticate.sh`) that pass `key`
   on the command line instead, computed from the **environment** being
-  deployed (see the [room-booking project README](https://github.com/geoffweatherall/room-booking#multi-environment-deployments)
+  deployed (see the [mootmaker project README](https://github.com/geoffweatherall/mootmaker#multi-environment-deployments)
   for the full multi-environment design):
 
   ```
